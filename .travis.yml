@@ -5,16 +5,7 @@ script: mvn install
 deploy:
   provider: releases
   api_key:
-    secure: 
-    H9i5Nb5+1VFwbQLMvFO4M77a4+zpr68ASUpUPmAMzOIbbP/FOm80mwG+y8ZtHadoUBT+7FUbv6a03vl7DDQDPcZbKa72vXcggF
-    Mc6Q14b10nPHScRVZ+PZsHnMi9jivRakAQJ5anO51o4pGTLdMeFDobM6aq8h+SpNFiufqZsmmmJZnu2UoSwWj5WnWDgAYm5hmPCiUAJwhy
-    wGJM/AJ7JaTNSSG3/oPqQv/CAmJZhkjsTOde6sOttoHRJDeY7dgBqDWD+H7LI7gkPEP7lHqSCof1EKKh1ga9pioEHhpPWS6ewBiQvZONvB
-    cnIc9k7zNcaSK6Sv8HYjZAMl3DWDiJx1UG5C0qrSF+ymZI0MmrITucLClyITcqLGeRp43c/QEaI2ADTfFrDe7MjDpdv489N08d+saKTSIM
-    a1Zl4Ccl3XNQk3OUIs2xsCHU7b6jpc683w0dOeTQzbjMUrrJrpb7RxAnjKztlCjEQEcvi46oO1QmfExOggsREm1f5/5NkMNcOYnC5zttM6
-    H2Y1enghoyQ5ybleWnwnFAV1ySKTvxeXRX1gQc+0DdXKzKHOey/aFkdg4NiCVsQBTgXkrM6Q1prnvkZrwe4Q5vVoHFQ/2Z61VWur/rlIiQ
-    sU7AMfVXggyTLMQE4r1S6andHS5NiUGse1uaYhnJH1lIqv9zINdsgik=
-  file:
-  "/home/travis/.m2/repository/ch/bbw/02_ConsoleCalculatorWithMaven/0.0.1-SNAPSHOT/02_ConsoleCalculatorW
-  ithMaven-0.0.1-SNAPSHOT.jar"
+    secure: "H9i5Nb5+1VFwbQLMvFO4M77a4+zpr68ASUpUPmAMzOIbbP/FOm80mwG+y8ZtHadoUBT+7FUbv6a03vl7DDQDPcZbKa72vXcggFMc6Q14b10nPHScRVZ+PZsHnMi9jivRakAQJ5anO51o4pGTLdMeFDobM6aq8h+SpNFiufqZsmmmJZnu2UoSwWj5WnWDgAYm5hmPCiUAJwhywGJM/AJ7JaTNSSG3/oPqQv/CAmJZhkjsTOde6sOttoHRJDeY7dgBqDWD+H7LI7gkPEP7lHqSCof1EKKh1ga9pioEHhpPWS6ewBiQvZONvBcnIc9k7zNcaSK6Sv8HYjZAMl3DWDiJx1UG5C0qrSF+ymZI0MmrITucLClyITcqLGeRp43c/QEaI2ADTfFrDe7MjDpdv489N08d+saKTSIMa1Zl4Ccl3XNQk3OUIs2xsCHU7b6jpc683w0dOeTQzbjMUrrJrpb7RxAnjKztlCjEQEcvi46oO1QmfExOggsREm1f5/5NkMNcOYnC5zttM6H2Y1enghoyQ5ybleWnwnFAV1ySKTvxeXRX1gQc+0DdXKzKHOey/aFkdg4NiCVsQBTgXkrM6Q1prnvkZrwe4Q5vVoHFQ/2Z61VWur/rlIiQsU7AMfVXggyTLMQE4r1S6andHS5NiUGse1uaYhnJH1lIqv9zINdsgik="
+  file: "/home/travis/.m2/repository/ch/bbw/02_ConsoleCalculatorWithMaven/0.0.1-SNAPSHOT/02_ConsoleCalculatorWithMaven-0.0.1-SNAPSHOT.jar"
   on:
     repo: pauldraheim/ConsoleCalculatorWithMaven
