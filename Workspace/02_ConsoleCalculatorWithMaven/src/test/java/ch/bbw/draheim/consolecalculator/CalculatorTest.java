@@ -33,4 +33,9 @@ public class CalculatorTest {
 	public void testDivisionDurchNullReturnsException() {
 		testee.division(10, 0);
 	}
+	
+	@Test
+	public void testDivisionDurchNullReturnsError() throws ArithmeticException {
+		testee.division(10, 0);
+	}
 }
