@@ -25,9 +25,41 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testSubstractionZweiPositiveIsOk() {
-		assertTrue(testee.substraktion(25, 10) == 15);
-	}
+    void testSummeZweiNegativeIsOk() {
+        assertTrue(testee.summe(-10, -25) == -35);
+    }
+
+    @Test
+    void testSummeZweiNullIsOk() {
+        assertTrue(testee.summe(0, 0) == 0);
+    }
+
+    @Test
+    void testSummePositivUndNegativIsOk() {
+        assertTrue(testee.summe(-10, 25) == 15);
+    }
+
+    @Test
+    void testSummePositivUndNullIsOk() {
+        assertTrue(testee.summe(10, 0) == 10);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    void testSummePositivUndMaxValueReturnsException() {
+        testee.summe(Integer.MAX_VALUE, 25);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    void testSummeNegativUndMinValueReturnsException() {
+        testee.summe(Integer.MIN_VALUE, -10);
+    }
+
+    @Test
+    void testSummeGrosseZahlenIsOk() {
+        assertTrue(testee.summe(1948294, 929182) == 2877476);
+    }
+	
+	
 
 	@Test(expected =  ArithmeticException.class)
 	public void testDivisionDurchNullReturnsException() {
