@@ -147,4 +147,5 @@ public class CalculatorTest {
 	public void testDivisionDurchNullReturnsError() throws ArithmeticException {
 		testee.division(10, 0);
 	}
+	
 }
