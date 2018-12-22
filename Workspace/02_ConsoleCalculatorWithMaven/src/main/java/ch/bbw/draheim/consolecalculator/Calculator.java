@@ -19,4 +19,16 @@ public class Calculator {
 	public int division(int value1, int value2) {
 		return value1 / value2;
 	}
+	
+	// Kann nur getestet werden, wenn Testfiles im gleichen Ordner
+	// wie diese Klasse ist, was mit der Maven Projektstruktur nicht möglich ist.
+	protected int summeProtected(int summand1, int summand2) {
+		return summand1 + summand2;
+	}
+	
+	// Nur mit Hilfe einer reflection injection mit Dp4j kann eine private method getestet
+	// werden, was in diesem Projekt nicht angefordert ist
+	private int summePrivate(int summand1, int summand2) {
+		return summand1 + summand2;
+	}
 }
