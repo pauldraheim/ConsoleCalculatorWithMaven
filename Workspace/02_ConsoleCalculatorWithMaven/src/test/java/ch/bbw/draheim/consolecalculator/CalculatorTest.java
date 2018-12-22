@@ -29,4 +29,8 @@ public class CalculatorTest {
 		assertTrue(testee.substraktion(25, 10) == 15);
 	}
 
+	@Test(expected =  ArithmeticException.class)
+	public void testDivisionDurchNullReturnsException() {
+		testee.division(10, 0);
+	}
 }
