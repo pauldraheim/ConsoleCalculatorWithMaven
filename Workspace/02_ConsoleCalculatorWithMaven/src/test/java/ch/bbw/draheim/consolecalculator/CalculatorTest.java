@@ -25,37 +25,37 @@ public class CalculatorTest {
 	}
 	
 	@Test
-    void testSummeZweiNegativeIsOk() {
+	public void testSummeZweiNegativeIsOk() {
         assertTrue(testee.summe(-10, -25) == -35);
     }
 
     @Test
-    void testSummeZweiNullIsOk() {
+    public void testSummeZweiNullIsOk() {
         assertTrue(testee.summe(0, 0) == 0);
     }
 
     @Test
-    void testSummePositivUndNegativIsOk() {
+    public void testSummePositivUndNegativIsOk() {
         assertTrue(testee.summe(-10, 25) == 15);
     }
 
     @Test
-    void testSummePositivUndNullIsOk() {
+    public void testSummePositivUndNullIsOk() {
         assertTrue(testee.summe(10, 0) == 10);
     }
 
-    @Test(expected = ArithmeticException.class)
-    void testSummePositivUndMaxValueReturnsException() {
-        testee.summe(Integer.MAX_VALUE, 25);
-    }
-
-    @Test(expected = ArithmeticException.class)
-    void testSummeNegativUndMinValueReturnsException() {
-        testee.summe(Integer.MIN_VALUE, -10);
+    @Test
+    public void testSummePositivUndMaxValueReturnsNegative() {
+        assertTrue(testee.summe(Integer.MAX_VALUE, 10) < 0);
     }
 
     @Test
-    void testSummeGrosseZahlenIsOk() {
+    public void testSummeNegativUndMinValueReturnsPositive() {
+        assertTrue(testee.summe(Integer.MIN_VALUE, -10) > 0);
+    }
+
+    @Test
+    public void testSummeGrosseZahlenIsOk() {
         assertTrue(testee.summe(1948294, 929182) == 2877476);
     }
     
@@ -67,37 +67,37 @@ public class CalculatorTest {
 	}
 	
 	@Test
-    void testSubstractionZweiNegativeIsOk() {
+	public void testSubstractionZweiNegativeIsOk() {
 		assertTrue(testee.substraktion(-25, -10) == -15);
     }
 
     @Test
-    void testSubstractionZweiMalNullIsOk() {
+    public void testSubstractionZweiMalNullIsOk() {
 		assertTrue(testee.substraktion(0, 0) == 0);
     }
 
     @Test
-    void testSubstractionPositiveUndNegativeIsOk() {
+    public void testSubstractionPositiveUndNegativeIsOk() {
 		assertTrue(testee.substraktion(25, -10) == 35);
     }
 
     @Test
-    void testSubstractionPositiveUndNullIsOk() {
+    public void testSubstractionPositiveUndNullIsOk() {
 		assertTrue(testee.substraktion(25, 0) == 25);
     }
 
-    @Test(expected =  ArithmeticException.class)
-    void testSubstractionMaxValueUndNegativeReturnsException() {
-		testee.substraktion(Integer.MAX_VALUE, -10);
-    }
-
-    @Test(expected =  ArithmeticException.class)
-    void testSubstractionMinValueUndPositiveReturnsException() {
-		testee.substraktion(Integer.MIN_VALUE, 10);
+    @Test
+    public void testSubstractionMaxValueUndNegativeReturnsException() {
+		assertTrue(testee.substraktion(Integer.MAX_VALUE, -10) < 0);
     }
 
     @Test
-    void testSubstractionNullUndPositiveWenigerAlsNull() {
+    public void testSubstractionMinValueUndPositiveReturnsException() {
+		assertTrue(testee.substraktion(Integer.MIN_VALUE, 10) > 0);
+    }
+
+    @Test
+    public void testSubstractionNullUndPositiveWenigerAlsNull() {
 		assertTrue(testee.substraktion(0, 2) < 0);
     }
 	
@@ -109,37 +109,37 @@ public class CalculatorTest {
 	}
 	
 	@Test
-    void testDivisionZweiPositiveIsOk() {
+	public void testDivisionZweiPositiveIsOk() {
 		assertTrue(testee.division(10, 2) == 5);
     }
 
     @Test
-    void testDivisionZweiNegativeIsOk() {
+    public void testDivisionZweiNegativeIsOk() {
 		assertTrue(testee.division(-10, -2) == 5);
     }
 
     @Test
-    void testDivisionPositiveUndNegativeIsOk() {
+    public void testDivisionPositiveUndNegativeIsOk() {
 		assertTrue(testee.division(-10, 2) == -5);
     }
 
     @Test
-    void testDivisionNullDurchPositiveIsOk() {
+    public void testDivisionNullDurchPositiveIsOk() {
 		assertTrue(testee.division(0, 2) == 0);
     }
 
     @Test
-    void testDivisionNullDurchNegativeIsOk() {
+    public void testDivisionNullDurchNegativeIsOk() {
 		assertTrue(testee.division(0, -2) == 0);
     }
 
     @Test
-    void testDivisionZahlMitKommaWirdGerundet() {
+    public void testDivisionZahlMitKommaWirdGerundet() {
 		assertTrue(testee.division(7, 6) == 1);
     }
     
-    @Test(expected =  ArithmeticException.class)
-    void testDivisionZweiteZahlGrösserAlsErsteReturnsZero() {
+    @Test
+    public void testDivisionZweiteZahlGrösserAlsErsteReturnsZero() {
 		assertTrue(testee.division(2, 5) == 0);
     }
 	
